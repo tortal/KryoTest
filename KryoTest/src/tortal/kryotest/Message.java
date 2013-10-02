@@ -3,11 +3,11 @@ package tortal.kryotest;
 public class Message {
 	
 	public String msg;
-	public Object cool;
+	public Object object;
 	
 	public Message(){
 		msg = "This class declares an Object, but it's actuall a SomeClass";
-		cool = new SomeClass();
+		object = new SomeClass();
 	}
 
 	@Override
@@ -19,10 +19,10 @@ public class Message {
 		if (getClass() != obj.getClass())
 			return false;
 		Message other = (Message) obj;
-		if (cool == null) {
-			if (other.cool != null)
+		if (object == null) {
+			if (other.object != null)
 				return false;
-		} else if (!cool.equals(other.cool))
+		} else if (!object.equals(other.object))
 			return false;
 		if (msg == null) {
 			if (other.msg != null)

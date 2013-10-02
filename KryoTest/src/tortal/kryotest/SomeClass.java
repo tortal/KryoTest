@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 public class SomeClass {
 	
-	ArrayList<String> cools;
+	ArrayList<String> list;
 	
 	public SomeClass(){
-		cools = new ArrayList<String>();
-		cools.add("Hello kryo");
+		list = new ArrayList<String>();
+		list.add("Hello kryo");
 	}
 
 	@Override
@@ -20,10 +20,10 @@ public class SomeClass {
 		if (getClass() != obj.getClass())
 			return false;
 		SomeClass other = (SomeClass) obj;
-		if (cools == null) {
-			if (other.cools != null)
+		if (list == null) {
+			if (other.list != null)
 				return false;
-		} else if (!cools.equals(other.cools))
+		} else if (!list.equals(other.list))
 			return false;
 		return true;
 	}
