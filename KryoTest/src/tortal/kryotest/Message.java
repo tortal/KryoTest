@@ -6,7 +6,7 @@ public class Message {
 	public Object object;
 	
 	public Message(){
-		msg = "This class declares an Object, but it's actuall a SomeClass";
+		msg = "This messsage contains SomeClass";
 		object = new SomeClass();
 	}
 
